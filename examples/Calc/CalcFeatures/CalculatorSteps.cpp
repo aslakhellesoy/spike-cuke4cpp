@@ -1,7 +1,7 @@
 // for now it works with gtest only, but it should switch library depending
 // on the testing library included
 #include <gtest/gtest.h>
-#include <cuke4cpp.h>
+#include <cuke/cuke.h>
 
 #include <Calculator.h>
 

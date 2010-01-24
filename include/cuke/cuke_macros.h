@@ -47,9 +47,9 @@ void CUKE_STEP_CLASS_NAME_(feature_name, step_name)::TestBody()
 #define WHEN_C(context, test_name, regex) CUKE_STEP_C_(context, test_name, regex)
 #define THEN_C(context, test_name, regex) CUKE_STEP_C_(context, test_name, regex)
 
-#define GIVEN(context, test_name, regex) GIVEN_C_(context, test_name, regex)
-#define WHEN(context, test_name, regex) WHEN_C_(context, test_name, regex)
-#define THEN(context, test_name, regex) THEN_C_(context, test_name, regex)
+#define GIVEN(context, test_name, regex) GIVEN_C(context, test_name, regex)
+#define WHEN(context, test_name, regex) WHEN_C(context, test_name, regex)
+#define THEN(context, test_name, regex) THEN_C(context, test_name, regex)
 
 
 #define CUKE_PARAM(index, type, name) type name = ::cuke::fromString<type>(::cuke::StepManager::getCurrentParam(index));

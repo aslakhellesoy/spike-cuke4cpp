@@ -1,14 +1,11 @@
-cmake_minimum_required(VERSION 2.6)
 project(jsoncpp)
 
-include_directories(include)
+set(JSON_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include CACHE INTERNAL "")
 
-add_library(json src/lib_json/json_reader.cpp
-                 src/lib_json/json_value.cpp
-                 src/lib_json/json_writer.cpp)
+include_directories(${JSON_INCLUDE_DIR})
 
-install(TARGETS json ARCHIVE DESTINATION lib)
+add_library(json src/lib_json/json_reader src/lib_json/json_value src/lib_json/json_writer)
 
-install(DIRECTORY include/json DESTINATION include)
-
+#install(TARGETS json ARCHIVE DESTINATION lib)
+#install(DIRECTORY ${JSON_INCLUDE_DIR}/json DESTINATION include)
 

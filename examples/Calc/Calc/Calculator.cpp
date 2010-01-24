@@ -1,3 +1,4 @@
+#include <limits>
 #include "Calculator.h"
 
 void Calculator::push(double n) {
@@ -13,9 +14,13 @@ double Calculator::add() {
 }
 
 double Calculator::divide() {
-    double result = 0;
+    double result = std::numeric_limits<double>::quiet_NaN();
     for(std::list<double>::const_iterator i = values.begin(); i != values.end(); ++i) {
-        result /= *i;
+        if (i == values.begin()) {
+            result = *i;
+        } else {
+            result /= *i;
+        }
     }
     return result;
 }
