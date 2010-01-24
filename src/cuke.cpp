@@ -19,7 +19,7 @@ StepManager::step_id_type StepMatchesResult::getAMatch() {
 }
 
 StepMatchesResult::match_result StepMatchesResult::getMatchResult(StepManager::step_id_type stepId) {
-    return matches.at(stepId);
+    return matches[stepId];
 }
 
 /*
