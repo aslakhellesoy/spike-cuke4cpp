@@ -1,0 +1,6 @@
+CMakeFiles
+Makefile
+*.cmake
+*.a
+CMakeCache.txt
+examples/Calc/CalculatorSteps
